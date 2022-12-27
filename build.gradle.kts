@@ -2,12 +2,12 @@
 plugins {
     id("com.android.application") version "7.3.1" apply false
     id("com.android.library") version "7.3.1" apply false
-    id("org.jetbrains.kotlin.android") version "1.6.10" apply false
-    id("org.jetbrains.kotlin.jvm") version "1.7.20" apply false
+    id("org.jetbrains.kotlin.android") version Kotlin.version apply false
+    id("org.jetbrains.kotlin.jvm") version Kotlin.version apply false
 }
 
-buildscript{
-    dependencies{
+buildscript {
+    dependencies {
         classpath(Build.androidBuildTools)
         classpath(Build.hiltAndroidGradlePlugin)
         classpath(Build.kotlinGradlePlugin)
