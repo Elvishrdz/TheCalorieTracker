@@ -3,6 +3,7 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        jcenter() // TODO: Warning: this repository is going to shut down soon
     }
 }
 dependencyResolutionManagement {
@@ -10,11 +11,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter() // TODO: Warning: this repository is going to shut down soon
     }
 }
 rootProject.name = "TheCalorieTracker"
 include ':app'
 include ':core'
+include ':core-ui'
 include ':onboarding'
 include ':onboarding:onboarding_presentation'
 include ':onboarding:onboarding_domain'
