@@ -5,6 +5,7 @@ plugins {
     id("org.jetbrains.kotlin.android") version Kotlin.version apply false
     id("org.jetbrains.kotlin.jvm") version Kotlin.version apply false
     id("com.github.ben-manes.versions") version BenManes.version
+    id("org.jlleitschuh.gradle.ktlint") version Ktlint.version
 }
 
 buildscript {
