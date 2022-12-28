@@ -8,7 +8,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.eahm.core.Route
 import com.eahm.core.UiEvent
-import com.eahm.onboarding_presentation.WelcomeScreen
+import com.eahm.onboarding_presentation.welcome.WelcomeScreen
 import com.eahm.thecalorietracker.ui.theme.TheCalorieTrackerTheme
 
 class MainActivity : ComponentActivity() {
