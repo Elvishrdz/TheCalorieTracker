@@ -1,3 +1,5 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
     id("com.android.application") version "7.3.1" apply false
@@ -14,4 +16,21 @@ buildscript {
         classpath(Build.hiltAndroidGradlePlugin)
         classpath(Build.kotlinGradlePlugin)
     }
+}
+
+tasks.register("installGitHook", Copy::class) {
+    val fileName = "pre-commit"
+
+    val osFileName = if (Os.isFamily(Os.FAMILY_MAC)) {
+        "$fileName-macos"
+    } else if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        "$fileName-windows"
+    } else {
+        fileName
+    }
+
+    from("${rootProject.rootDir}/scripts/$osFileName")
+    into("${rootProject.rootDir}/.git/hooks")
+
+    rename(osFileName, fileName)
 }
