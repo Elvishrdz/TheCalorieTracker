@@ -13,7 +13,9 @@ import com.eahm.core.R
 import com.eahm.core_ui.LocalSpacing
 
 @Composable
-fun WelcomeScreen() {
+fun WelcomeScreen(
+    onContinue: () -> Unit,
+) {
     val spacing = LocalSpacing.current
 
     Column(
@@ -36,7 +38,7 @@ fun WelcomeScreen() {
         Spacer(modifier = Modifier.height(spacing.spaceMedium))
         AppActionButton(
             text = stringResource(id = R.string.cta_continue),
-            onClick = {},
+            onClick = onContinue,
         )
     }
 }
@@ -44,5 +46,7 @@ fun WelcomeScreen() {
 @Preview
 @Composable
 private fun PreviewWelcomeScreen() {
-    WelcomeScreen()
+    WelcomeScreen(
+        onContinue = {},
+    )
 }
