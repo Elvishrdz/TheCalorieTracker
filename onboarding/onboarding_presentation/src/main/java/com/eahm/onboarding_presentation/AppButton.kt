@@ -1,9 +1,9 @@
 package com.eahm.onboarding_presentation
 
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
@@ -14,7 +14,7 @@ fun AppActionButton(
     modifier: Modifier = Modifier,
     text: String,
     onClick: () -> Unit,
-    textStyle: TextStyle = MaterialTheme.typography.button,
+    textStyle: TextStyle = MaterialTheme.typography.titleSmall,
 ) {
     Button(
         modifier = modifier,
@@ -25,7 +25,7 @@ fun AppActionButton(
                 .padding(LocalSpacing.current.spaceSmall),
             text = text,
             style = textStyle,
-            color = MaterialTheme.colors.onPrimary,
+            color = MaterialTheme.colorScheme.onPrimary,
         )
     }
 }
