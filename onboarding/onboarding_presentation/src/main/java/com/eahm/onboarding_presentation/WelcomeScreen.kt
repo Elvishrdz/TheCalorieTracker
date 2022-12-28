@@ -1,8 +1,8 @@
 package com.eahm.onboarding_presentation
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -27,13 +27,13 @@ fun WelcomeScreen(
         Text(
             text = stringResource(id = R.string.welcome_title),
             textAlign = TextAlign.Center,
-            style = MaterialTheme.typography.h1,
+            style = MaterialTheme.typography.displayLarge,
         )
         Spacer(modifier = Modifier.height(spacing.spaceSmall))
         Text(
             text = stringResource(id = R.string.welcome_description),
             textAlign = TextAlign.Center,
-            style = MaterialTheme.typography.h2,
+            style = MaterialTheme.typography.displayMedium,
         )
         Spacer(modifier = Modifier.height(spacing.spaceMedium))
         AppActionButton(
