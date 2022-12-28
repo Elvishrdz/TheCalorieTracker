@@ -3,4 +3,8 @@
     <string name="welcome_title">Welcome</string>
     <string name="welcome_description">To start we need some information</string>
     <string name="cta_continue">Continue</string>
+    <string name="whats_your_gender">What\'s your gender?</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="next">Next</string>
 </resources>
