@@ -43,7 +43,9 @@ class MainActivity : ComponentActivity() {
                     composable(Route.AGE) {
                         AgeScreen(
                             scaffoldState = scaffoldState,
-                            onNextClick = {},
+                            onNextClick = {
+                                navController.navigate(Route.HEIGHT)
+                            },
                         )
                     }
                     composable(Route.HEIGHT) {
