@@ -3,10 +3,12 @@ package com.eahm.thecalorietracker
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.material.rememberScaffoldState
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.eahm.core.Route
+import com.eahm.onboarding_presentation.age.AgeScreen
 import com.eahm.onboarding_presentation.gender.GenderScreen
 import com.eahm.onboarding_presentation.welcome.WelcomeScreen
 import com.eahm.thecalorietracker.ui.theme.TheCalorieTrackerTheme
@@ -18,6 +20,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             TheCalorieTrackerTheme {
+                val scaffoldState = rememberScaffoldState()
                 val navController = rememberNavController()
                 NavHost(
                     navController = navController,
@@ -38,7 +41,10 @@ class MainActivity : ComponentActivity() {
                         )
                     }
                     composable(Route.AGE) {
-
+                        AgeScreen(
+                            scaffoldState = scaffoldState,
+                            onNextClick = {},
+                        )
                     }
                     composable(Route.HEIGHT) {
 

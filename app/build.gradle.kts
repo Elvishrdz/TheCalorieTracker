@@ -53,6 +53,7 @@ dependencies {
     implementation(Compose.ui)
     implementation(Compose.uiToolingPreview)
     implementation(Compose.hiltNavigationCompose)
+    implementation(Compose.material)
     implementation(Compose.material3)
     implementation(Compose.material3WindowSizeClass)
     implementation(Compose.runtime)
